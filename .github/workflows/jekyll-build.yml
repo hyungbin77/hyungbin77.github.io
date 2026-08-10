@@ -1,13 +1,15 @@
 name: Jekyll build
 
+# 사이트 배포 자체는 GitHub Pages가 처리합니다.
+# 이 워크플로는 푸시한 내용이 실제로 빌드되는지 미리 확인하는 검사용입니다.
+# front matter 오타나 잘못된 Liquid 문법을 배포 전에 잡아줍니다.
 on:
-  # Run after bad-pr check
-  workflow_run:
-    workflows: ["Cleanup bad PR"]
-    branches: [main]
-    types:
-      - completed
-      
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
 permissions:
   contents: read
 

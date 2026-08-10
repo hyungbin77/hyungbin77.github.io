@@ -1,0 +1,33 @@
+---
+layout: archive
+permalink: /blog/
+title: "기록"
+author_profile: true
+redirect_from:
+  - /year-archive/
+  - /wordpress/blog-posts/
+---
+
+{% include base_path %}
+
+<p>
+  공부하면서 막혔던 지점과 해결 과정을 남깁니다.
+  잘 정리된 글보다 <strong>무엇을 어떻게 파고들었는지</strong>가 남는 쪽을 목표로 합니다.
+</p>
+
+{% if site.posts.size > 0 %}
+  {% capture written_year %}'None'{% endcapture %}
+  {% for post in site.posts %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% if year != written_year %}
+      <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+      {% capture written_year %}{{ year }}{% endcapture %}
+    {% endif %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% else %}
+  <p><em>
+    아직 작성한 글이 없습니다.
+    <code>_posts/</code> 에 <code>YYYY-MM-DD-제목.md</code> 형식으로 파일을 추가하세요.
+  </em></p>
+{% endif %}
