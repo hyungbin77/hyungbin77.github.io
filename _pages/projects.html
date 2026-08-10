@@ -1,0 +1,29 @@
+---
+layout: archive
+title: "프로젝트"
+permalink: /projects/
+author_profile: true
+redirect_from:
+  - /portfolio/
+---
+
+{% include base_path %}
+
+<p>
+  문제 정의 → 데이터 → 접근 방법 → 결과 순서로 정리했습니다.
+  각 프로젝트에서 <strong>제가 직접 맡은 부분</strong>과 <strong>숫자로 확인된 결과</strong>를 함께 적었습니다.
+</p>
+
+{% assign projects = site.portfolio | sort: 'date' | reverse %}
+
+{% if projects.size > 0 %}
+  {% for post in projects %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% else %}
+  <p><em>
+    아직 등록된 프로젝트가 없습니다.
+    <code>_portfolio/</code> 디렉토리에 마크다운 파일을 추가하면 이 목록에 자동으로 쌓입니다.
+    작성 형식은 <code>_portfolio/_example-project.md</code> 를 복사해서 쓰세요.
+  </em></p>
+{% endif %}

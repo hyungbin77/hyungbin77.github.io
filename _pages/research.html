@@ -1,0 +1,48 @@
+---
+layout: archive
+title: "연구"
+permalink: /research/
+author_profile: true
+redirect_from:
+  - /publications/
+---
+
+{% include base_path %}
+
+<p>
+  석사 과정에서 진행한 연구와 학회 발표입니다.
+  연구직을 목표로 하고 있지는 않지만, 데이터를 다루는 방식과 분석의 깊이를
+  가장 분명하게 보여줄 수 있는 이력이라 정리해 두었습니다.
+</p>
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">
+    Google Scholar 프로필: <a href="{{ site.author.googlescholar }}">{{ site.author.googlescholar }}</a>
+  </div>
+{% endif %}
+
+{% assign research = site.publications | sort: 'date' | reverse %}
+
+{% if research.size > 0 %}
+  {% for category in site.publication_category %}
+    {% assign title_shown = false %}
+    {% for post in research %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2>{{ category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  <p><em>
+    아직 등록된 항목이 없습니다.
+    <code>_publications/</code> 디렉토리에 파일을 추가하고 front matter의
+    <code>category</code> 를 <code>journal</code> 또는 <code>conference</code> 로 지정하면
+    해당 섹션에 자동으로 분류됩니다.
+    작성 형식은 <code>_publications/_example-paper.md</code> 를 참고하세요.
+  </em></p>
+{% endif %}

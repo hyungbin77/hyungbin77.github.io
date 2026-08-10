@@ -1,18 +1,11 @@
-# Authors
-
-Name Name:
-  name        : "Name Name"
-  uri         : "https://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
-
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+# 여러 명이 글을 쓰는 사이트에서 글별 작성자 프로필을 바꿀 때 사용합니다.
+# 개인 포트폴리오에서는 필요하지 않으며, 기본값은 _config.yml 의 author 항목입니다.
+#
+# 사용하려면 아래처럼 정의하고, 글의 front matter 에 `author: 박형빈` 을 적으세요.
+#
+# 박형빈:
+#   name   : "박형빈"
+#   email  : "ppeace98@gmail.com"
+#   bio    : "통계학 석사 수료 · 데이터 분석 / 머신러닝"
+#   avatar : "profile.png"
+#   github : "hyungbin77"
