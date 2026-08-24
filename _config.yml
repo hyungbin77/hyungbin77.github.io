@@ -15,7 +15,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "박형빈 · Data & AI Portfolio"
 title_separator          : "-"
 name                     : &name "박형빈 (Park Hyungbin)"
-description              : &description "통계학 석사 수료 · 금융 데이터와 AI 모델을 다루는 데이터 사이언티스트. 국민연금 기금운용본부 기금정보AI팀 재직."
+description              : &description "통계학 석사 수료 · 시계열과 자연어 처리를 다루는 데이터 사이언티스트. 국민연금 기금운용본부 기금정보AI팀 재직."
 url                      : https://hyungbin77.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -29,7 +29,7 @@ author:
   avatar           : "profile.png"
   name             : "박형빈"
   pronouns         : # example: "she/her"
-  bio              : "통계학 석사 수료<br>금융 데이터 · AI 모델 개발"
+  bio              : "통계학 석사 수료<br>Data Scientist · Time Series · NLP"
   location         : "전주, 대한민국"
   employer         : "국민연금 기금운용본부 기금정보AI팀"
   uri              : # URL
